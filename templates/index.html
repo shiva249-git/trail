@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSC CGL AI Quiz</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <button id="darkModeToggle">Dark Mode</button>
+
+  <h1>SSC CGL AI Practice Quiz</h1>
+
+  <div class="controls">
+    <input id="topicInput" placeholder="Enter topic (e.g. History)" />
+    <select id="difficultySelect">
+      <option value="Easy">Easy</option>
+      <option value="Medium" selected>Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+    <input id="numQuestionsInput" type="number" min="1" value="5" />
+    <button id="generateBtn">Generate Quiz</button>
+  </div>
+
+  <div id="quizCard" style="display:none;">
+    <div id="questionText"></div>
+    <div id="optionsContainer"></div>
+    <div id="timer">Time left: <span id="timeLeft">--</span>s</div>
+    <div id="progressBarContainer">
+      <div id="progressBar"></div>
+    </div>
+    <button id="nextBtn" disabled>Next</button>
+  </div>
+
+  <div id="resultScreen" style="display:none;"></div>
+
+  <audio id="correctSound" src="{{ url_for('static', filename='correct.mp3') }}"></audio>
+  <audio id="wrongSound" src="{{ url_for('static', filename='wrong.mp3') }}"></audio>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

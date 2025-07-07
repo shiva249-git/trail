@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.dark {
+  background: #222;
+  color: #eee;
+}
+
+.option {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.option.selected {
+  background-color: yellow;
+}
+
+.option.correct {
+  background-color: #4caf50;
+  color: white;
+}
+
+.option.incorrect {
+  background-color: #f44336;
+  color: white;
